@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Image Editor</a>
+            <a class="navbar-brand" href="/">FashRek</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -61,12 +61,13 @@
     {% block body %}{% endblock %}
 
     <div class="container">
-        <h1 class="fs-2 text">ImagEditor - Edit Your APP Online</h1>
+        <h1 class="fs-2 text">FashRek</h1>
         <form action="/edit" method="post" enctype="multipart/form-data">
             <div class="mb-3">
-                <label for="formFile" class="form-label">Default file input example</label>
-                <input class="form-control" type="file" name="file" id="formFile">
+                <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                <input class="form-control" type="file" name="file" id="formFileMultiple" multiple>
             </div>
+            
             <div class="mb-3">
 
                 <div class="form-floating">

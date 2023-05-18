@@ -37,20 +37,24 @@ def edit():
     if request.method == 'POST':
         operation = request.form.get('operation')
         # check if the post request has the file part
-        if 'file' not in request.files:
-            flash('No file part')
-            return 'error'
-        file = request.files['file']
+        # if 'file' not in request.files:
+            # flash('No file part')
+            # return 'error'
+
+        files = request.files.getlist("file")
+        # file = request.files['file']
         # If the user does not select a file, the browser submits an
         # empty file without a filename.
-        if file.filename == '':
-            flash('No selected file')
-            return 'error'
-        if file and allowed_file(file.filename):
+        # if file.filename == '':
+        #     flash('No selected file')
+        #     return 'error'
+        for file in files:
+            # file.save(file.filename)
+            # if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             processImage(filename, operation)
-            flash(f"Your image has been processed and is available here  <a href='/static/{filename}'> here")
+            flash(f"Your image has been processed and is available <a href='/static/{filename}'> here")
             
     return render_template('index.html')
 
