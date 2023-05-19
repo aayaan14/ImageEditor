@@ -35,7 +35,12 @@ def about():
 @app.route("/edit", methods=['GET', 'POST'])
 def edit():
     if request.method == 'POST':
-        operation = request.form.get('operation')
+        op1 = request.form.get('operation1')
+        op2 = request.form.get('operation2')
+        op3 = request.form.get('operation3')
+
+        operation = [op1,op2,op3]
+        
         # check if the post request has the file part
         # if 'file' not in request.files:
             # flash('No file part')
@@ -59,4 +64,4 @@ def edit():
     return render_template('index.html')
 
 
-app.run(debug=True, port=5002)
+app.run(debug=True, port=5003)

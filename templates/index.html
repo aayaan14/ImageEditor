@@ -67,24 +67,49 @@
                 <label for="formFileMultiple" class="form-label">Multiple files input example</label>
                 <input class="form-control" type="file" name="file" id="formFileMultiple" multiple>
             </div>
-            
+
             <div class="mb-3">
 
                 <div class="form-floating">
-                    <select class="form-select" id="floatingSelect" name="operation"
+                    <select class="form-select" id="floatingSelect" name="operation1"
                         aria-label="Floating label select example">
-                        <option selected>Select an Editing operation</option>
-                        <option value="cpng">Convert to PNG</option>
-                        <option value="cgray">Convert to Grayscale</option>
-                        <option value="cwebp">Convert to WebP</option>
-                        <option value="cjpg">Convert to JPG</option>
+                        <option selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <!-- <option value="cwebp">Convert to WebP</option> -->
+                        <!-- <option value="cjpg">Convert to JPG</option> -->
 
                     </select>
-                    <label for="floatingSelect">Choose an operation</label>
+                    <label for="floatingSelect">Choose an option</label>
                 </div>
-            </div>
-            <button type="submit" class="btn btn-success">Submit</button>
-        </form>
+
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelect" name="operation2"
+                    aria-label="Floating label select example">
+                    <option selected>Weather</option>
+                    <option value="hot">Hot</option>
+                    <option value="cold">Cold</option>
+                    <!-- <option value="cwebp">Convert to WebP</option> -->
+                    <!-- <option value="cjpg">Convert to JPG</option> -->
+                    
+                </select>
+                <label for="floatingSelect">Choose an option</label>
+                </div>
+    
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelect" name="operation3" aria-label="Floating label select example">
+                    <option selected>Occasion</option>
+                    <option value="casual">Casual</option>
+                    <option value="formal">Formal</option>
+                    <!-- <option value="cwebp">Convert to WebP</option> -->
+                    <!-- <option value="cjpg">Convert to JPG</option> -->
+
+                    </select>
+                <label for="floatingSelect">Choose an operation</label>
+                </div>
+    
+    <button type="submit" class="btn btn-success">Submit</button>
+    </form>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
